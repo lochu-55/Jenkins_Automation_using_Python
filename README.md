@@ -1,13 +1,14 @@
+
 # Jenkins_Automation_using_Python
 
 ## Table of Contents
 - [Installation](#installation)
 - [Jenkins Object Creation](#jenkins-object-creation)
-- [Jenkins Server Information APIs](#Jenkins Server Information APIs)
-- [Job Management APIs](#job-management)
-- [Build Management APIs](#build-management)
-- [View Management APIs](#view-management)
-- [Node Management APIs](#view-management)
+- [Jenkins Server Information APIs](#jenkins-server-information-apis)
+- [Job Management APIs](#job-management-apis)
+- [Build Management APIs](#build-management-apis)
+- [View Management APIs](#view-management-apis)
+- [Node Management APIs](#node-management-apis)
 
 ---
 
@@ -51,8 +52,9 @@ Jenkins runs on port `8080` by default. Open a browser and visit:
 http://<your-server-ip>:8080
 ```
 
-Complete the setup by following the on-screen instructions.
+Complete the setup by following the on-screen instructions.  
 Jenkins is now ready for use! 🚀
+
 ---
 # Jenkins Python Integration with python-jenkins
 
@@ -101,8 +103,6 @@ After installing the `python-jenkins` library, you can create a Jenkins object t
 
 This will print the Jenkins version if the connection is successful. You are now ready to interact with Jenkins using the available API methods.
 
-
-
 ## Jenkins Server Information APIs
 
 | API Method   | Description |
@@ -111,8 +111,7 @@ This will print the Jenkins version if the connection is successful. You are now
 | `get_version()` | Get the Jenkins server version. |
 | `get_whoami()` | Get information about the authenticated user. |
 | `get_plugins()` | Retrieve the list of installed plugins. |
-| `get_jobs()` | Get list of jobs. Each job is a dictionary with ‘name’, ‘url’, ‘color’ and ‘fullname’ keys.
-| `get_whoami()` | Get information about the authenticated user. |
+| `get_jobs()` | Get list of jobs. Each job is a dictionary with ‘name’, ‘url’, ‘color’ and ‘fullname’ keys. |
 | `get_plugins_info()` | Retrieves information about all installed plugins (deprecated).|
 
 ---
@@ -135,9 +134,7 @@ This will print the Jenkins version if the connection is successful. You are now
 | `get_job_info(name)`             | Retrieves detailed information for a specific job.  |
 | `get_job_info_regex(pattern)`    | Retrieves information about jobs whose names match the specified regex pattern.  |
 | `get_job_name(name)`             | Returns the name of a Jenkins job, used for identity verification.  |
-| `wipeout_job_workspace(name)`             | Wipes out the workspace for a given Jenkins job. |
-
-
+| `wipeout_job_workspace(name)`   | Wipes out the workspace for a given Jenkins job.    |
 
 ---
 
@@ -152,11 +149,9 @@ This will print the Jenkins version if the connection is successful. You are now
 | `delete_build(name, number)`                   | Deletes a specific Jenkins build permanently. |
 | `get_running_builds()`                         | Retrieves a list of all currently running builds.|
 | `get_build_test_report(name, number)`          | Retrieves the test results report for a specific build.|
-| `get_build_env_vars(name, number,`             | Get build environment variables.|
-
+| `get_build_env_vars(name, number)`             | Get build environment variables.       |
 
 ---
-
 
 ## View Management APIs
 
@@ -170,7 +165,7 @@ This will print the Jenkins version if the connection is successful. You are now
 | `reconfig_view(name, config_xml)` | Modifies the configuration of an existing view.         |
 | `get_view_config(name)`       | Retrieves the configuration of an existing Jenkins view in XML format. |
 
-# Nodes Management APIs
+## Node Management APIs
 
 | **Method Name**              | **Description**                                           |
 |------------------------------|-----------------------------------------------------------|
@@ -185,8 +180,6 @@ This will print the Jenkins version if the connection is successful. You are now
 | `get_node_config(name)`       | Get the XML configuration of a Jenkins node.             |
 | `reconfig_node(name, config_xml)` | Modify the existing configuration of a Jenkins node.    |
 
-
 Now you can use the `python-jenkins` library to manage Jenkins views, jobs, nodes, and more through the API.
-
 
 The extra APIs and information are provided in the document in the above repo.
