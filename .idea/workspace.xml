@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50d10904-71e4-4e01-8d62-723fb890c89e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Inputs/Inputs_to_jenkinsAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Inputs/Inputs_to_jenkinsAPI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Inputs/XMLs/sample_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Inputs/XMLs/sample_view.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkins_Automation/Jenkins_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkins_Automation/Jenkins_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="50d10904-71e4-4e01-8d62-723fb890c89e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
