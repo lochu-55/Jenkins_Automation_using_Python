@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50d10904-71e4-4e01-8d62-723fb890c89e" name="Changes" comment="changes to info code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="50d10904-71e4-4e01-8d62-723fb890c89e" name="Changes" comment="added readme content">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738565163417</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added readme content">
+      <option name="closed" value="true" />
+      <created>1738578254037</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738578254037</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -138,6 +145,7 @@
     <MESSAGE value="changes" />
     <MESSAGE value="changes to build code" />
     <MESSAGE value="changes to info code" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes to info code" />
+    <MESSAGE value="added readme content" />
+    <option name="LAST_COMMIT_MESSAGE" value="added readme content" />
   </component>
 </project>
