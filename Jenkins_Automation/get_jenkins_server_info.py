@@ -30,6 +30,9 @@ class Jenkins_server:
         plugin = self.server.get_plugin_info('Docker plugin',depth=1)
         print("Particular plugin info in jenkins: ",plugin)
 
+    def delete_workspace(self,job_name):
+        self.server.wipeout_job_workspace(job_name)
+        print(f"wiped out the workspace of {job_name}")
 
 if __name__ == '__main__':
     server = Jenkins_server()
