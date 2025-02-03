@@ -9,6 +9,8 @@ class Inputs:
     build_number = 2
     regex_pattern = 'job'
     upstream_job = "job0"
+    view_name = "My View"
+
 
     artifact_url = "http://localhost:8080/job/job1/ws/Reports/report.xml"
     artifact_filename = 'job1_report1.xml'

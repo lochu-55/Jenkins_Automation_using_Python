@@ -13,7 +13,7 @@ class View:
 
     def create_the_view(self,view_name):
         try:
-            view_config = open('../Inputs/XMLs/sample_view.xml', mode='r', encoding='utf-8').read()
+            view_config = open('Inputs/XMLs/sample_view.xml', mode='r', encoding='utf-8').read()
             self.jenkins.create_view(view_name,view_config)
             print("Created a new view in jenkins...")
         except jenkins.JenkinsException as e:
@@ -28,9 +28,18 @@ class View:
         except jenkins.JenkinsException as e:
             print(f"failed to fetch views : {e}")
 
+    def get_config_xml_of_view(self,view_name):
+        try:
+            view_xml = self.jenkins.get_view_config(view_name)
+            print(f"retrieved the {view_name} config xml :")
+            print(view_xml)
+        except jenkins.JenkinsException as e:
+            print(f"failed to retrieve {view_name} config xml : {e}")
+
+
     def update_the_view(self,update_view_name):
         try:
-            updated_view_config = open('../Inputs/XMLs/updated_job_view.xml', mode='r', encoding='utf-8').read()
+            updated_view_config = open('Inputs/XMLs/updated_job_view.xml', mode='r', encoding='utf-8').read()
             self.jenkins.reconfig_view(update_view_name,updated_view_config)
             print(f"updated the {update_view_name} successfully")
         except jenkins.JenkinsException as e:
@@ -44,15 +53,24 @@ class View:
         except jenkins.JenkinsException as e:
             print(f"failed to delete {delete_view_name} : {e}")
 
+    def check_view_existence(self,view_name):
+        try:
+            self.jenkins.view_exists(view_name)
+            print(f"found {view_name} in jenkins server successfully")
+        except jenkins.JenkinsException as e:
+            print(f"{view_name} not found : {e}")
 
 
 if __name__ == '__main__':
     view = View()
-    view.create_the_view('My View')
-    view.create_the_view('My new View')
+    view.create_the_view(Inputs.view_name)
+    #view.create_the_view('My new View')
+    view.get_config_xml_of_view(Inputs.view_name)
     view.get_all_view_names()
-    view.update_the_view('My View')
+    view.update_the_view(Inputs.view_name)
     view.delete_the_view('My new View')
     view.get_all_view_names()
+    view.check_view_existence(Inputs.view_name)
+
 
 
