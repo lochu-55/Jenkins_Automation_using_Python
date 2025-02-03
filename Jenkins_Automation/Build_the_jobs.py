@@ -77,7 +77,12 @@ class Build:
             print(f"failed to retrieve console output of build : {e}")
 
 
-
+    def get_env_var_of_build(self,job_name,build_no):
+        try:
+            op = self.jenkins.get_build_env_vars(job_name,build_no)
+            print(f"The env variables of {job_name} is {op}")
+        except Exception as e:
+            print(f"failed to retrieve env variables of build : {e}")
 
 
 if __name__ == '__main__':
@@ -88,5 +93,6 @@ if __name__ == '__main__':
     build.get_build_test_report_of_job()
     #build.delete_the_build()
     build.get_running_builds_info()
+    build.get_env_var_of_build(Inputs.build_job_name,Inputs.build_number)
     build.get_console_output_of_build(Inputs.build_job_name,Inputs.build_number)
 
